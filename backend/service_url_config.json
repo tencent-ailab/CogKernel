@@ -1,0 +1,11 @@
+{
+    "query_decomposition": [],
+    "concept_perspective_generation": ["xxxx:xx"],
+    "machine_reading_comprehension": [],
+    "proposition_generation": ["xxxx:xx"],
+    "concept_identification": ["xxxx:xx"],
+    "filter_doc": ["xxxx:xx"],
+    "dialog_summarization": ["xxxx:xx"],
+    "entity_linking": [],
+    "sentence_encoding": ["xxxx:xx"]
+  }

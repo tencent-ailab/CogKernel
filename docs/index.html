@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Cognitive Kernel: A Dockerized “Autopilot” System that Everyone Can Deploy Privately
+        ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cognitive Kernel</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.jpg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="./resources/CK_logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span style="vertical-align: middle">Cognitive Kernel</span>
+            </h1>
+          <h2 class="subtitle is-4 publication-subtitle">
+            An Open-source Agent System towards Generalist Autopilots
+          </h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Cognitive Kernel Team</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Tencent AI Lab, Seattle</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/tencent-ailab/CogKernel"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/CognitiveKernel"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Models and Data</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+       <h2 class="title is-3">Introduction</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            <b>Cognitive Kernel</b> is an open-source agent system designed to pursue the goal of building generalist autopilots. 
+            Unlike copilot systems, which primarily rely on users to provide essential state information (e.g., task descriptions) and assist users by answering questions and auto-completing contents, autopilot systems should complete tasks from start to finish independently, which requires the system to acquire the state information from the environments actively.
+          </p>
+            <p>To achieve this, an autopilot system must understand user intents, actively gathering necessary information from various real-world sources — such as the open web, local documents, and user-specific long-term memory — and making wise decisions. Cognitive Kernel adopts a model-centric design, where the central policy model (a fine-tuned LLM) initiates interactions with the environment using a combination of atomic actions, such as opening files, clicking buttons, saving intermediate results to memory, or calling the LLM itself. This differs from the widely used environment-centric design, where a task-specific environment with predefined actions is fixed, and the policy model is limited to select an action from a given set of options. 
+                </p>
+            <p><b>Cognitive Kernel</b> is fully dockerized, ensuring everyone can deploy it privately and securely. We release the system and the backbone model to encourage further research on LLM-driven autopilot systems.</p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+        <div class="content has-text-centered">
+          <img src="static/images/framework.jpg" alt="Overview of VDebugger." width="90%"/>
+          <div class="content has-text-left">
+          <p>Figure 1: Conceptual comparison of (a) Copilot system, (b) Environment-centric Agent system, and (c) Cognitive Kernel system. After receiving a task, Cognitive Kernel will evaluate whether it has all essential state information to make a sound action. If not, it will actively perceive the missing state information from the environment, which can be a deeper-level self-contained autopilot task.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<br> <br>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <h2 class="title is-3" id="examples">System Demonstration</h2>
+      <video width="85%" controls>
+        <source src="static/images/Case1.mp4" type="video/mp4">
+      </video>
+      <br> <br>
+      <video width="85%" controls>
+        <source src="static/images/Case2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h2 class="title is-3" id="examples">Experimental Results</h2>
+        <div class="content has-text-centered">
+          <img src="static/images/experiment-main.jpg" width="85%"/>
+          <div class="content has-text-left">
+          <p>Table 1: We evaluate Cognitive Kernel on tasks that best reflect how users would interact with the system when deployed.  Specifically, we focus on evaluating its ability to (1) gather real-time information and complete web-based tasks, (2) process user-uploaded files and answer questions, and (3) manage the interaction history with the user for better personalization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{zhang2024cognitive,
+    title={Cognitive Kernel: An Open-source Agent System towards Generalist Autopilots}, 
+    author={Zhang, Hongming and Pan, Xiaoman and Wang, Hongwei and Ma, Kaixin and Yu, Wenhao and Yu, Dong},
+    year={2024},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

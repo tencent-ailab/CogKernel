@@ -1,0 +1,73 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    environment:
+      - KR_SERVICE_IP_FILE=/app/service_url_config.json
+      - WEB_IP=web:3000
+      - NUM_WORKERS=1
+      - MODEL_NAME=ck
+      - SERVICE_IP=xxxx:xx
+      - INFERENCE_SERVER_ENGINE=vLLM
+      - OPENAI_API_KEY=XXXX
+      - ACTIVATE_KE=true
+      - ACTIVATE_HISTORY=false
+      - ACTIVATE_SHORT_FEEDBACK=false
+      - HISTORY_SUMMARY_LENGTH=2
+      - MAX_CUSTOMIIZED_CHARACTER=2
+      - POSTGRES_USER=ck
+      - POSTGRES_PASSWORD=ckyyds
+    depends_on:
+      - postgres
+      - web
+    volumes:
+      - ./character_pool:/app/Character_pool
+      - customized_character_pool:/app/Customized_character_pool
+      - uploaded_files:/app/UploadedFiles
+      - local_dbs:/app/Database_local
+      - ./developer_users.txt:/app/developer_users.txt
+
+  web:  
+    build:
+      context: ./web  
+      dockerfile: Dockerfile
+    expose:
+      - "3000"
+    environment:
+      - MAX_BROWSERS=16  
+    volumes:
+      - screenshots:/screenshots  
+      - DownloadedFiles:/DownloadedFiles
+
+  nginx:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+      - web
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: ck
+      POSTGRES_PASSWORD: ckyyds
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data_ck:/var/lib/postgresql/data
+      - ./init_db:/docker-entrypoint-initdb.d  
+
+
+volumes:
+  customized_character_pool:
+  local_dbs:
+  uploaded_files:
+  postgres_data_ck:
+  screenshots:
+  DownloadedFiles:
