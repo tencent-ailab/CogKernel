@@ -135,22 +135,34 @@ Demo 1: Search for citations of an uploaded paper on Google Scholar.
 
 <!-- ![Demo 1](https://raw.githubusercontent.com/tencent-ailab/CogKernel/main/docs/static/images/Case1.mp4) -->
 
-<div>
-<video width="85%" controls>
+<div align="center">
+  <a href="https://youtu.be/mJ_ne4jxXM0">
+    <img src="https://img.youtube.com/vi/mJ_ne4jxXM0/maxresdefault.jpg" style="width: 600px"/>
+  </a>
+</div>
+
+<!-- <video width="85%" controls>
         <source src="https://raw.githubusercontent.com/tencent-ailab/CogKernel/main/docs/static/images/Case1.mp4" type="video/mp4">
 </video>
-</div>
+</div> -->
 
 <br>
 Demo 2: Download a scientific paper and ask related questions.
 
+<br>
+
+<div align="center">
+  <a href="https://youtu.be/vZ4GEwIas-o">
+    <img src="https://img.youtube.com/vi/vZ4GEwIas-o/maxresdefault.jpg" style="width: 600px"/>
+  </a>
+</div>
 <!-- ![Demo 2](https://github.com/tencent-ailab/CogKernel/docs/static/images/Case2.mp4) -->
 
-<div>
+<!-- <div>
 <video width="85%" controls>
         <source src="https://raw.githubusercontent.com/tencent-ailab/CogKernel/main/docs/static/images/Case2.mp4" type="video/mp4">
 </video>
-</div>
+</div> -->
 
 ## Contribution
 
