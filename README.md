@@ -169,7 +169,7 @@ Users should use Cognitive kernel carefully and be responsible for any potential
 
 ## Citation
 
-If you find Cognitive Kernel is help, please consider cite the following technical report.
+If you find Cognitive Kernel is helpful, please consider cite the following technical report.
 
 ```
 @article{zhang2024cognitive,
