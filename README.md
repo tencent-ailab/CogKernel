@@ -11,7 +11,7 @@ An Early-stage “Autopilot” System for Everyone
 </h3>
 
 <p align="center">
-| <a href="https://tencent-ailab.github.io/CogKernel"><b>Project Page</b></a> | <a href="http://arxiv.org/abs/2409.10277"><b>Paper</b></a> |
+ <a href="https://tencent-ailab.github.io/CogKernel"><b>Project Page</b></a> | <a href="http://arxiv.org/abs/2409.10277"><b>Paper</b></a> | <a href="https://huggingface.co/CognitiveKernel"><b>Model</b></a>
 
 </p>
 Cognitive Kernel is an open-sourced agent system designed to achieve the goal of building general-purpose autopilot systems.
