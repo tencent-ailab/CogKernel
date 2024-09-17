@@ -133,20 +133,24 @@ Then, you should be able to play with the system from your local machine at (htt
 
 Demo 1: Search for citations of an uploaded paper on Google Scholar.
 
-<div>
+![Demo 1](https://github.com/tencent-ailab/CogKernel/docs/static/images/Case1.mp4)
+
+<!-- <div>
 <video width="85%" controls>
         <source src="docs/static/images/Case1.mp4" type="video/mp4">
 </video>
-</div>
+</div> -->
 
 <br>
 Demo 2: Download a scientific paper and ask related questions.
 
-<div>   
+![Demo 2](https://github.com/tencent-ailab/CogKernel/docs/static/images/Case2.mp4)
+
+<!-- <div>
 <video width="85%" controls>
         <source src="docs/static/images/Case2.mp4" type="video/mp4">
 </video>
-</div>
+</div> -->
 
 ## Contribution
 
