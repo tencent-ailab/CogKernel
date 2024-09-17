@@ -145,8 +145,6 @@ Demo 1: Search for citations of an uploaded paper on Google Scholar.
 
 Demo 2: Download a scientific paper and ask related questions.
 
-<br>
-
 <div align="center">
   <a href="https://youtu.be/vZ4GEwIas-o">
     <img src="https://img.youtube.com/vi/vZ4GEwIas-o/maxresdefault.jpg" style="width: 400px"/>
