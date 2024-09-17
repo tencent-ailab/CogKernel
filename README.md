@@ -129,22 +129,22 @@ docker compose build
 
 Then, you should be able to play with the system from your local machine at (http://0.0.0.0:8080). PS: for the first time you start the system, you might observe an error on some machines. This is because the database docker takes some time to initiate. Just kill it and restart, the error should be gone.
 
-<!-- ## System Demonstration
+## System Demonstration
 
 Demo 1: Search for citations of an uploaded paper on Google Scholar.
 
-![Demo 1](https://github.com/tencent-ailab/CogKernel/docs/static/images/Case1.mp4)
+<!-- ![Demo 1](https://raw.githubusercontent.com/tencent-ailab/CogKernel/main/docs/static/images/Case1.mp4) -->
 
-<!-- <div>
+<div>
 <video width="85%" controls>
-        <source src="docs/static/images/Case1.mp4" type="video/mp4">
+        <source src="https://raw.githubusercontent.com/tencent-ailab/CogKernel/main/docs/static/images/Case1.mp4" type="video/mp4">
 </video>
-</div> -->
+</div>
 
 <!-- <br>
 Demo 2: Download a scientific paper and ask related questions.
 
-![Demo 2](https://github.com/tencent-ailab/CogKernel/docs/static/images/Case2.mp4) -->
+![Demo 2](https://github.com/tencent-ailab/CogKernel/docs/static/images/Case2.mp4)
 
 ## Contribution
 
