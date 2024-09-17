@@ -141,16 +141,10 @@ Demo 1: Search for citations of an uploaded paper on Google Scholar.
 </video>
 </div> -->
 
-<br>
+<!-- <br>
 Demo 2: Download a scientific paper and ask related questions.
 
 ![Demo 2](https://github.com/tencent-ailab/CogKernel/docs/static/images/Case2.mp4) -->
-
-<!-- <div>
-<video width="85%" controls>
-        <source src="docs/static/images/Case2.mp4" type="video/mp4">
-</video>
-</div> -->
 
 ## Contribution
 
