@@ -11,7 +11,7 @@ An Early-stage “Autopilot” System for Everyone
 </h3>
 
 <p align="center">
-| <a href="https://tencent-ailab.github.io/CogKernel"><b>Project Page</b></a> | <a href=""><b>Paper</b></a> |
+| <a href="https://tencent-ailab.github.io/CogKernel"><b>Project Page</b></a> | <a href="http://arxiv.org/abs/2409.10277"><b>Paper</b></a> |
 
 </p>
 Cognitive Kernel is an open-sourced agent system designed to achieve the goal of building general-purpose autopilot systems.
@@ -128,6 +128,23 @@ docker compose build
 </div>
 
 Then, you should be able to play with the system from your local machine at (http://0.0.0.0:8080). PS: for the first time you start the system, you might observe an error on some machines. This is because the database docker takes some time to initiate. Just kill it and restart, the error should be gone.
+
+## System Demonstration
+
+Demo 1: Search for citations of an uploaded paper on Google Scholar.
+
+<video width="85%" controls>
+        <source src="docs/static/images/Case1.mp4" type="video/mp4">
+</video>
+
+<br>
+Demo 2: Download a scientific paper and ask related questions.
+
+<br>
+       
+<video width="85%" controls>
+        <source src="docs/static/images/Case2.mp4" type="video/mp4">
+</video>
 
 ## Contribution
 
