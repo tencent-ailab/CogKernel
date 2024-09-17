@@ -141,12 +141,8 @@ Demo 1: Search for citations of an uploaded paper on Google Scholar.
   </a>
 </div>
 
-<!-- <video width="85%" controls>
-        <source src="https://raw.githubusercontent.com/tencent-ailab/CogKernel/main/docs/static/images/Case1.mp4" type="video/mp4">
-</video>
-</div> -->
-
 <br>
+
 Demo 2: Download a scientific paper and ask related questions.
 
 <br>
