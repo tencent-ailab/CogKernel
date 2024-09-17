@@ -122,7 +122,7 @@ docker-compose up
 or
 
 ```
-docker compose build
+docker compose up
 ```
 
 </div>
