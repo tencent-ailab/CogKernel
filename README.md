@@ -167,6 +167,18 @@ We welcome and appreciate any contributions and collaborations from the communit
 Cognitive Kernel is **not** a Tencent product and should only be used for research purpose.
 Users should use Cognitive kernel carefully and be responsible for any potential consequences.
 
+## Citation
+
+If you find Cognitive Kernel is help, please consider cite the following technical report.
+
+```
+@article{zhang2024cognitive,
+    title={Cognitive Kernel: An Open-source Agent System towards Generalist Autopilots},
+    author={Zhang, Hongming and Pan, Xiaoman and Wang, Hongwei and Ma, Kaixin and Yu, Wenhao and Yu, Dong},
+    year={2024},
+}
+```
+
 ## Contact
 
 For technical questions or suggestions, please use Github issues or Discussions.
