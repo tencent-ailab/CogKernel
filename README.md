@@ -36,30 +36,32 @@ Following the guide, everyone should be able to deploy a private 'autopilot' sys
 
 </div>
 
-2. Start the model servers
+2. Install the necessary environment to run the model services. We used TGI to serve both our policy model and helper model. You can set up the TGI official docker following the guidelines [here](https://github.com/huggingface/text-generation-inference). We also provide the docker image that we used in our experiments [here](https://hub.docker.com/r/cogkernel/v1-tgi-inference), which has an older version of TGI installed. Alternatively, we also support vllm inference for our policy model, and you can follow the official vllm installation guidelines [here](https://github.com/vllm-project/vllm). For vllm, we have tested our service on 0.5.4 and 0.4.2, we found that there might be unstable issues for vllm>=0.5.5. 
 
 <div style="margin-left: 40px;">
 
 - 2.1 Start the main policy model
 
-  - Step 1: Install the vllm package.
+  - If you are using TGI
     ```
-    pip install vllm==0.5.4
+    text-generation-launcher --model-id path/to/downloaded/policy/model --port YOUR_PORT --max-total-tokens 8192 --max-input-length 8000 --max-batch-prefill-tokens 8000 --num-shard 8 --rope-scaling linear --master-port YOUR_MASTER_PORT
     ```
-  - Step 2: Launch the vllm service.
+    If you choose to use our docker image, you will need to activate the conda environment before starting the TGI command.
     ```
-    python -m vllm.entrypoints.openai.api_server --model path/to/downloaded/policy/model --worker-use-ray --tensor-parallel-size 8 --port your_port --host 0.0.0.0 --trust-remote-code --max-model-len 8192 --served-model-name ck
+    conda activate tgi
+    ```
+  - If you are using vllm
+    ```
+    python -m vllm.entrypoints.openai.api_server --model path/to/downloaded/policy/model --worker-use-ray --tensor-parallel-size 8 --port YOUR_PORT --host 0.0.0.0 --trust-remote-code --max-model-len 8192 --served-model-name ck
     ```
 
 - 2.2 Start the Helper LLM
 
-  - Step 1: Install the TGI framework.
-
-  - Step 2: Launch the TGI service:
+  - Step 1: Launch the TGI service:
     ```
     CUDA_VISIBLE_DEVICES=YOUR_GPU_ID text-generation-launcher --model-id PATH_TO_YOUR_HELPER_LLM_CHECKPOINT --port YOUR_PORT --num-shard 1 --disable-custom-kernels
     ```
-  - Step 3: Configure service URLs.
+  - Step 2: Configure service URLs.
 
     Update the `service_url_config.json` file. Replace the values for the following keys with the IP address and port of your Helper LLM instance:
 
